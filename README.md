@@ -16,7 +16,7 @@
 
 
 
-# Aula 1 - 08-08-2024
+# Atividade 1 - 08-08-2024
     
 Criar repositório no github chamado “bertoti”, dentro dele, criar uma pasta “Eng SW”, com arquivo README, colar esse trecho e comentar com as nossas palavras
     
@@ -32,7 +32,7 @@ A última característica mencionada é o trade-off. Em português, podemos trad
 
 <br />
     
-# Aula 2 - 12-08-2024
+# Atividade 2 - 12-08-2024
     
 Listar 3 trade-offs não funcionais
     
@@ -44,7 +44,7 @@ Listar 3 trade-offs não funcionais
 
 <br />
 
-# Aula 3 - 16-08-2024 
+# Atividade 3 - 16-08-2024 
 
 - Repetir as classes SalaAula e Aula com um exemplo seu!(Java)
 - Faça testes automatizados!
