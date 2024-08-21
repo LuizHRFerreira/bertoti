@@ -1,4 +1,22 @@
-# 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+ 
+<div align="center">
+    <img src="assets/capa-readme.png" alt="capa-readme" width="100%" />
+</div>
+
+<br />
+
+<p>Como estudantes do 2º semestre do curso de Banco de Dados na FATEC SJC, este repositório destina armazenar atividades propostas pelo professor na materia de Engenharia de Software</p>
+
+## Índice
+
 
 - Aula 1 -> 08-08-2024
     
