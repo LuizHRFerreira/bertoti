@@ -1,3 +1,5 @@
+package List;
+
 import java.util.List;
 import java.util.LinkedList;
 
@@ -21,5 +23,5 @@ public class SalaAula {
 	public List<Aluno> getAlunos(){
 		return alunos;
 	}
-	
+
 }

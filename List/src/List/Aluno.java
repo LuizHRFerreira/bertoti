@@ -1,3 +1,4 @@
+package List;
 
 public class Aluno {
 	
@@ -26,6 +27,4 @@ public class Aluno {
 		this.ra = ra;
 	}
 	
-	
-
 }

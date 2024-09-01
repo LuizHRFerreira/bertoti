@@ -1,10 +1,11 @@
 package Concert;
 
+
 //Importa as bibliotecas List e LinkedList
 import java.util.LinkedList;
 import java.util.List;
 
-// Criada a classe Band
+//Criada a classe Band
 public class Band {
 	
 	// Criada uma lista com membros da banda e chamada de members

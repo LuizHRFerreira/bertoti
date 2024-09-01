@@ -1,7 +1,5 @@
 package Concert;
 
-/** Criada a classe BandMember aonde adicionei os atributos name que terá o nome do integrante da banda e 
- * o atributo instrument que é o instrumento que o integrante toca*/
 public class Member{
 	
 	// Todos os atributos são texto
