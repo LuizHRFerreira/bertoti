@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	
-<div align="center">
-    <img src="assets/capa-readme.png" alt="capa-readme" width="100%" />
-</div>
-
-<br />
 
 <p>Sou estudante do 2º semestre de Banco de Dados na FATEC SJC e este repositório armazena atividades propostas pelo professor na disciplina de Engenharia de Software.</p>
 
