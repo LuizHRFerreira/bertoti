@@ -162,5 +162,17 @@ Listar 3 trade-offs não funcionais
 
 	}
 
+### Atividade  4 - 25/10/2024
+- Diagrama de Classes UML <br><br>
+Professor pediu para que fizessemos o diagrama das classes da atividade 3
+![image](Atividade4.jpg)
+
+ 
+### Atividade  5 - 22-11-2024
+- Bot Telegram
+  
+Professor pediu para que fizessemos um chat bot no telegram com inteligência artificial Ollama. Trabalho feito em trio.
+[Clique aqui para acessar bot](https://github.com/darloscaniel/bertoti/tree/main/Eng%20SW/ChatBot-Assist)
+
 </body>
 </html>
