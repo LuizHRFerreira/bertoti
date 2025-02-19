@@ -174,5 +174,10 @@ Professor pediu para que fizessemos o diagrama das classes da atividade 3
 Professor pediu para que fizessemos um chat bot no telegram com inteligência artificial Ollama. Trabalho feito em trio.
 [Clique aqui para acessar bot](https://github.com/darloscaniel/bertoti/tree/main/Eng%20SW/ChatBot-Assist)
 
+### Atividade 6 - 17 - 02 - 2025
+- SpringBoot
+
+Criação de SpringBoot baseado no exemplo do repositório https://github.com/mkheck/SpringBootUpAndRunning/tree/chapter3end
+
 </body>
 </html>
