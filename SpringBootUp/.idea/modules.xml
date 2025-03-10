@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/SpringBootUpAndRunning.iml" filepath="$PROJECT_DIR$/.idea/SpringBootUpAndRunning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbur-rest-demo/PlayStation.iml" filepath="$PROJECT_DIR$/sbur-rest-demo/PlayStation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java.iml" filepath="$PROJECT_DIR$/.idea/java.iml" />
     </modules>
   </component>
 </project>

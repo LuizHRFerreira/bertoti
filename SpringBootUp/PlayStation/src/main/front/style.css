@@ -1,0 +1,109 @@
+body {
+    background-color: #FFFDD0;
+    justify-content: center;
+}
+
+.tab {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 10px;
+}
+
+.playstationcontent {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+    margin: 25px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+button {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+.deleteButton {
+    background-color: #bf0024;
+}
+
+.deleteButton:hover {
+    background-color: #ff0025;
+}
+
+#cadastrarButton {
+    background-color: #2e6db4;
+}
+
+#cadastrarButton:hover {
+    background-color: #489fff;
+}
+
+#procurarButton {
+    background-color: #4cae4c;
+}
+
+#procurarButton:hover {
+    background-color: #00d900;
+}
+
+.editButton {
+    background-color: #f3c300;
+}
+
+.editButton:hover {
+    background-color: #ffcf21;
+}
+
+.playstation-card {
+    text-align: center;
+    background: #f8f9fa;
+    border-bottom: 5px solid #0d6efd;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    height: 320px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.playstation-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#playStationList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+img {
+    width: 250px;
+    height: 150px;
+}
