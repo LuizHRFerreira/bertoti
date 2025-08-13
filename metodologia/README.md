@@ -4,7 +4,7 @@
 Olá! Meu nome é **Luiz Henrique** e atualmente curso o **4º semestre de Banco de Dados** na Fatec de São José dos Campos. Trabalho como desenvolvedor na empresa **Pandô**, onde aplico e aprimoro meus conhecimentos em programação, banco de dados e desenvolvimento de soluções web.
 
 ## Contatos
-* [LinkedIn](https://www.linkedin.com/LuizHRFerreira)
+* [LinkedIn](https://www.linkedin.com/in/luiz-henrique-rabello-ferreira-3600752ba/)
 
 ## Meus Principais Conhecimentos
 Meus projetos na Fatec têm sido desenvolvidos principalmente com **Java** no backend e **Vue.js** no frontend, integrando bancos de dados relacionais e aplicando conceitos de arquitetura e boas práticas de desenvolvimento.
