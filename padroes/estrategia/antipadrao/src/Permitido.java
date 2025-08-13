@@ -1,7 +1,7 @@
 class Permitido implements Emprestimo {
 
     @Override
-    public boolean emprestar() {
-        return true;
+    public String emprestar() {
+        return "Permitido";
     }
 }

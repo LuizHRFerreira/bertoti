@@ -4,18 +4,16 @@ class Conta {
     protected double saldo;
     private Emprestimo regraEmprestimo;
 
-    public Conta(String titular, double saldoInicial, Emprestimo regraEmprestimo) {
+    public Conta(String titular, double saldoInicial) {
         this.titular = titular;
         this.saldo = saldoInicial;
-        this.regraEmprestimo = regraEmprestimo;
     }
 
-    public void verificarEmprestiomo(){
-        if
-        (regraEmprestimo.emprestar()) {
-            System.out.println("Empréstimo aprovado");
-        }else{
-            System.out.println("Empréstimo não aprovado");
-        }
+    public void setEmprestimo(Emprestimo emprestimo){
+        this.regraEmprestimo = emprestimo;
+    }
+
+    public String verificarEmprestiomo(){
+        return regraEmprestimo.emprestar();
     }
 }

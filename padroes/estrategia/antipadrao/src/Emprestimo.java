@@ -1,4 +1,3 @@
 public interface Emprestimo {
-    boolean emprestar();
-
+    String emprestar();
 }
