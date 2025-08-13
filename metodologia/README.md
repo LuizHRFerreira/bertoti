@@ -1,50 +1,49 @@
-# Coloque seu nome aqui
+# Luiz Henrique Rabello Ferreira
 
 ## Introdução
-
-Faça uma breve introdução sobre você. Fale de sua formação e carreira. Caso aplicável, fale de publicações ou apresentações em eventos da área de computação. Inclua uma foto!
+Olá! Meu nome é **Luiz Henrique** e atualmente curso o **4º semestre de Banco de Dados** na Fatec de São José dos Campos. Trabalho como desenvolvedor na empresa **Pandô**, onde aplico e aprimoro meus conhecimentos em programação, banco de dados e desenvolvimento de soluções web.
 
 ## Contatos
-* [GIT](https://www.git.com)
-* [LinkedIn](https://www.linkedin.com)
+* [LinkedIn](https://www.linkedin.com/LuizHRFerreira)
 
 ## Meus Principais Conhecimentos
-Apresente seus principais conhecimentos. Foque nos conhecimentos que possui maior domínio e que deseja desenvolver durante sua carreira.
+Meus projetos na Fatec têm sido desenvolvidos principalmente com **Java** no backend e **Vue.js** no frontend, integrando bancos de dados relacionais e aplicando conceitos de arquitetura e boas práticas de desenvolvimento.
 
+---
 
 ## Meus Projetos
 
-### Em 2021-2
-Fale sobre o projeto desenvolvido. Apresente a empresa parceira, o problema e a solução entregue pela equipe (mínimo de um parágrafo por item). Recomenda-se o uso de figuras (ou até mesmo vídeos) para ilustrar os principais projetos.
+### 2025-1 — Projeto *Pontual*
+No terceiro semestre, desenvolvemos o **Pontual**, um aplicativo voltado para o **controle de pontos** de empresas parceiras.  
+A empresa parceira foi a **Altave**, referência em tecnologias de câmeras e sistemas de controle. Ela começou como uma startup no Parque Tecnológico de São José dos Campos, utilizando balões meteorológicos para monitoramento do clima, e atualmente atua em projetos de segurança de grande porte, como vigilância de plataformas petrolíferas.
 
-[GIT](https://www.git.com)
+O caso de uso proposto envolvia a manutenção de um grande navio em um hangar. A Altave forneceu câmeras com **reconhecimento facial** e uma API para integração, cabendo à nossa equipe registrar e gerenciar os pontos.  
+O sistema permite cadastrar empresas, colaboradores e contabilizar o tempo de trabalho de cada um. Além disso, implementamos diferenciais como:
+- Cálculo de salário com base nas horas trabalhadas;
+- Alteração e ajuste de pontos;
+- Tratamento de escalas e turnos noturnos.
+
+[Repositório no GitHub](https://github.com/Steam-Ducks/point-system)
 
 #### Tecnologias Utilizadas
-Apresente brevemente as tecnologias utilizadas. Uma tecnologia por linha. Indique qual a importância de cada tecnologia para o projeto.
+[![My Skills](https://skillicons.dev/icons?i=java,figma,git,github,idea,postgres,spring,vue,supabase,vscode&theme=light)](https://skillicons.dev)
 
 #### Contribuições Pessoais
-Apresente suas contribuições no projeto. Foque nas funcionalidades em que você mais atuou. Descreva sua atuação em detalhes, especificando que tecnologias você utilizou.
+Atuei tanto no **frontend** quanto no **backend**, mas minha principal contribuição foi no **frontend**, onde tenho mais domínio da tecnologia. Estruturei e organizei o projeto em **Vue.js**, definindo layouts, rotas e padrões de código.  
+Também implementei a conexão do frontend com o backend, garantindo a integração com a API e o banco de dados.
 
 #### Hard Skills
-Apresente as hard skills que você utilizou/desenvolveu durante o projeto e o nível de proficiência alcançado. Exemplo: CSS - Sei fazer com autonomia
+- **Java** — Programação orientada a objetos, criação de APIs REST
+- **PostgreSQL** — Modelagem, criação e otimização de consultas SQL
+- **Supabase** — Configuração e integração com aplicações web
+- **Git/GitHub** — Controle de versão, padrões de commit, criação de branches e pull requests
+- **API REST** — Consumo e integração com sistemas externos
 
 #### Soft Skills
-Apresente as soft skills que você utilizou/desenvolveu durante o projeto e em quais situações elas foram fundamentais. Exemplo: Comunicação - Precisei exercitar minhas habilidades de comunicação para viabilizar as reuniões semanais levando em conta as disponibilidades dos membros, que não cursavam as mesmas disciplinas.
+- **Trabalho em equipe** — Colaboração constante com colegas para integrar backend e frontend
+- **Resolução de problemas** — Ajuste de funcionalidades para lidar com casos complexos como turnos noturnos
+- **Organização** — Estruturação de pastas e rotas no frontend para facilitar manutenção
+- **Pensamento analítico** — Identificação de melhorias e criação de soluções eficientes para processos
+- **Liderança técnica** — Orientação de colegas com menos experiência em Vue.js
 
-### Em 2022-1
-Mesmo formato
-
-### Em 2022-2
-Mesmo formato
-
-### Em 2023-1
-Mesmo formato
-
-### Em 2023-2
-Mesmo formato
-
-
-
-
-
-
+---

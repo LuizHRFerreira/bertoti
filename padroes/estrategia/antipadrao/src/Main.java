@@ -2,13 +2,16 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Conta contaLuiz = new Conta("luiz",50000);
-        Conta contaCarlos = new Conta("Carlos",50);
+        ContaEmpresa contaEmpresa = new ContaEmpresa("Microsoft", 10000);
+        contaEmpresa.emprestimo(20);
 
-        contaLuiz.setEmprestimo(new Permitido());
-        contaCarlos.setEmprestimo(new Proibido());
+        ContaAposentado contaAposentado = new ContaAposentado("Aposentado", 50);
+        contaAposentado.emprestimo(30);
 
-        System.out.println(contaLuiz.verificarEmprestiomo());
-        System.out.println(contaCarlos.verificarEmprestiomo());
+        ContaComum contaComum = new ContaComum("Jiuliano Bertoti",0.5);
+        contaComum.emprestimo(5000000);
+
+        ContaEstudante contaEstudante = new ContaEstudante("Luiz", 100000);
+        contaEstudante.emprestimo(500);
     }
 }
