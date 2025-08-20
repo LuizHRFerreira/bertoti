@@ -1,0 +1,78 @@
+Esse é o anti patern
+
+public class Estacao{
+
+	private double temperatura;
+	private double umidade;
+	private double pressão;
+
+	Previsao.atualizar(temperatura, umidade, pressao);
+	HIstorico.atualizar(temperatura, umidade, pressao);
+
+	//Acomplamento - Classe concreta sendo referenciada e toda vez que acrescentar uma nova temos que citar a classe concreta nominalmente, é uma ligação forte que causa duplicação de código toda vez que alterar uma classe, tem que alterar outra
+	
+´´´´´
+}
+
+public class Previsao{
+	atualizar(double, double, double){
+	´´´´´´
+	}
+}
+
+public classHistorico
+	atualizar(double, double, double){
+	´´´´´´
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Esse é o anti patern
+
+public class Estacao{
+
+	private double temperatura;
+	private double umidade;
+	private double pressão;
+private List<Observador> observadores = new linked...;
+
+	public void addObservador(Observador o){
+		observadores.add(0);
+	}
+
+	public void notificar(){
+		for(Observador observador:observadores){
+			observador.atualizar(temperatura, umidade,pressao)
+		} 
+	}
+}//fechado para modificação, aberto extenção
+
+public interface observado{
+	atualizar (double, double, double);
+}
+
+public class Previsao implement observador{
+	atualizar(double, double, double){
+	}
+}
+
+public classHistorico implements observador{
+	atualizar(double, double, double){
+	}
+}
+
+
+Public class Dashboard implements Observador{
+}
