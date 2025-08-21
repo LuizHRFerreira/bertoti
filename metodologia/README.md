@@ -5,7 +5,7 @@
   <br>
   <!-- Sua imagem de perfil -->
   <!-- Substitua '#' pela URL da sua imagem de perfil. -->
-  <img src="assets/luiz.png" alt="Sua Imagem de Perfil" style="border-radius: 50%; width: 180px; height: 180px; border: 4px solid #333; margin-top: -90px; display: block; margin-left: auto; margin-right: auto;">
+  <img src="assets/Luiz.png" alt="Foto de perfil" style="border-radius: 50%; width: 180px; height: 180px; border: 4px solid #333; margin-top: -90px; display: block; margin-left: auto; margin-right: auto;">
   <br>
   <h1>Portfólio — Luiz Henrique</h1>
   <h4>Desenvolvimento de Banco de Dados — FATEC prof. Jessen Vidal (São josé dos campos).</h4>
