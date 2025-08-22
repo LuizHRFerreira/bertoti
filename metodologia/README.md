@@ -1,7 +1,7 @@
 <div align="center">
   <!-- Banner (opcional, mas adiciona um toque profissional) -->
   <!-- Substitua 'LINK_PARA_SEU_BANNER' pela URL da sua imagem de banner, se tiver uma. -->
-  <img src="assets/header.png" alt="Banner do Portfólio" style="width:100%; max-width:1000px;">
+  <img src="assets/Header.png" alt="Banner do Portfólio" style="width:100%; max-width:1000px;">
   <br>
   <br>
   
