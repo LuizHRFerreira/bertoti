@@ -115,11 +115,12 @@
     ];
   </code></pre>
 
-  <p align="justify"><b>Captura de organização de pastas:</b></p>
-  <!-- Substitua 'LINK_DA_IMAGEM_ORGANIZACAO_PASTAS' pela URL da imagem de organização de pastas. -->
-  <img src="https://github.com/user-attachments/assets/2a019ee0-b8f1-48fc-8f33-299a00ed62a6" alt="Organização de Pastas" style="width:100%; max-width:388px;">
+  <div align="center">
+      <p align="justify"><b>Navegação entre as páginas:</b></p>
+      <img src="assets/navegacao.gif" alt="Organização de Pastas">
+  </div>
+  <hr>
   </details>
-
   <details>
     <summary>📌 Integração do frontend com o backend</summary>
 
@@ -157,6 +158,12 @@
       }
     };
 </code></pre>
+
+  <div align="center">
+      <p align="justify"><b>Consumo de end point para listar marcações de ponto:</b></p>
+    <img src="assets/folha_de_ponto.gif" alt="Organização de Pastas">
+  </div>
+  <hr>
   </details>
   <details>
     <summary>📌 Contribuições no backend</summary>
@@ -210,7 +217,7 @@
     
   </code></pre>
         
-    <p align="justify"><b>Trecho do `application.properties`:</b></p>
+  <p align="justify"><b>Trecho do `application.properties`:</b></p>
     <pre><code class="language-properties">
     spring.jpa.database=postgresql
     spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
@@ -223,6 +230,10 @@
     spring.datasource.password=********
     spring.datasource.driver-class-name=org.postgresql.Driver
   </code></pre>
+    <div align="center">
+      <p align="justify"><b>Consumo de end point para listar marcações de ponto:</b></p>
+      <img src="assets/cadastro_empregado.gif" alt="Organização de Pastas">
+    </div>
   </details>
   <details>
         <summary>📌 Criação da folha de ponto</summary>
@@ -263,6 +274,11 @@
     return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
     },
   </code></pre>
+
+  <div align="center">
+      <p align="justify"><b>Exemplo de inclusão de ponto:</b></p>
+    <img src="assets/registro_de_ponto.gif" alt="Organização de Pastas">
+  </div>
 </details>
   
   ---
