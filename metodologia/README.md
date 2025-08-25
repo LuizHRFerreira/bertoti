@@ -68,11 +68,13 @@
   <h2>Contribuições Pessoais</h2>
   <details>
     <summary>📌 Estruturação do projeto em Vue.js</summary>
-    <p align="justify">
-      - Organizei as pastas, defini rotas e criei padrões de código para garantir consistência no projeto.
-      - Estruturei os layouts principais e componentes reutilizáveis.
-    </p>
-    <p align="justify"><b>Trecho do arquivo de rotas:</b></p>
+    
+  <p align="justify">
+    - Organizei as pastas, defini rotas e criei padrões de código para garantir consistência no projeto.
+    - Estruturei os layouts principais e componentes reutilizáveis.
+  </p>
+  <p align="justify"><b>Trecho do arquivo de rotas:</b></p>
+    
     <pre><code class="language-js">
     import UserPage from '@/views/users/UserIndex.vue';
     import Test from '@/components/Test.vue';
@@ -111,20 +113,24 @@
       }
       ...
     ];
-    </code></pre>
-        <p align="justify"><b>Captura de organização de pastas:</b></p>
-        <!-- Substitua 'LINK_DA_IMAGEM_ORGANIZACAO_PASTAS' pela URL da imagem de organização de pastas. -->
-        <img src="https://github.com/user-attachments/assets/2a019ee0-b8f1-48fc-8f33-299a00ed62a6" alt="Organização de Pastas" style="width:100%; max-width:388px;">
-      </details>
+  </code></pre>
 
-      <details>
-        <summary>📌 Integração do frontend com o backend</summary>
-        <p align="justify">
-          - Implementei a comunicação com a API, consumindo endpoints para exibição e manipulação de dados.
-          - Configurei interceptadores de requisição/resposta para lidar com autenticação e erros.
-        </p>
-        <p align="justify"><b>Trecho do arquivo `TimeRecordService`:</b></p>
-        <pre><code class="language-js">
+  <p align="justify"><b>Captura de organização de pastas:</b></p>
+  <!-- Substitua 'LINK_DA_IMAGEM_ORGANIZACAO_PASTAS' pela URL da imagem de organização de pastas. -->
+  <img src="https://github.com/user-attachments/assets/2a019ee0-b8f1-48fc-8f33-299a00ed62a6" alt="Organização de Pastas" style="width:100%; max-width:388px;">
+  </details>
+
+  <details>
+    <summary>📌 Integração do frontend com o backend</summary>
+
+  <p align="justify">
+    - Implementei a comunicação com a API, consumindo endpoints para exibição e manipulação de dados.
+    - Configurei interceptadores de requisição/resposta para lidar com autenticação e erros.
+  </p>
+  <p align="justify"><b>Trecho do arquivo `TimeRecordService`:</b></p>
+  <pre>
+              
+    <code class="language-js">
     import axios from 'axios';
     import UserService from './UserService';
 
@@ -152,14 +158,15 @@
     };
 </code></pre>
   </details>
-
   <details>
     <summary>📌 Contribuições no backend</summary>
-    <p align="justify">
-      - Criação de classes e services.
-      - Integração com banco online <b>Supabase</b>.
-    </p>
-    <p align="justify"><b>Trecho da classe `EmployeeController`:</b></p>
+  
+  <p align="justify">
+    - Criação de classes e services.
+    - Integração com banco online <b>Supabase</b>.
+  </p>
+  <p align="justify"><b>Trecho da classe `EmployeeController`:</b></p>
+    
     <pre><code class="language-java">
     public class EmployeeController {
         @Autowired
@@ -200,9 +207,11 @@
             }
         }
     }
-    </code></pre>
-        <p align="justify"><b>Trecho do `application.properties`:</b></p>
-        <pre><code class="language-properties">
+    
+  </code></pre>
+        
+    <p align="justify"><b>Trecho do `application.properties`:</b></p>
+    <pre><code class="language-properties">
     spring.jpa.database=postgresql
     spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
     spring.jpa.hibernate.ddl-auto=none
@@ -213,16 +222,17 @@
     spring.datasource.username=postgres...
     spring.datasource.password=********
     spring.datasource.driver-class-name=org.postgresql.Driver
-    </code></pre>
-      </details>
-
-      <details>
+  </code></pre>
+  </details>
+  <details>
         <summary>📌 Criação da folha de ponto</summary>
-        <p align="justify">
-          - Criação da lógica por calculo e impressão dos pontos em telas
-        </p>
-        <p align="justify"><b>Trecho de TimeReconrdIndex.vue</b></p>
-        <pre><code class="language-js">
+    
+  <p align="justify">
+    - Criação da lógica por calculo e impressão dos pontos em telas
+  </p>
+  <p align="justify"><b>Trecho de TimeReconrdIndex.vue</b></p>
+
+    <pre><code class="language-js">
     computed: {
     // Lista os funcionarios no select
     employeeslist() {
@@ -258,33 +268,27 @@
     const minutes = totalMinutes % 60;
     return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
     },
-    </code></pre>
-      </details>
-
-
-    ---
-
-
-
-
-    ## Aprendizados
-
-    <div align="center">
+  </code></pre>
+</details>
+  
+  ---
+  
+  ## Aprendizados
+  <div align="center">
       <p>Habilidades e conhecimentos que adquiri e aprimorei:</p>
     </div>
-
-    <p align="justify">
+  <p align="justify">
       Além de aplicar conhecimentos prévios, também desenvolvi novas habilidades ao longo dos projetos:
     </p>
-
-    <ul>
+  <ul>
       <li>
         <b><span style="color:#28A745;">Vue.js em projetos reais:</span></b> Aprendi a lidar com a organização e escalabilidade de um frontend em produção, pois precisei estruturar rotas, layouts e componentes reutilizáveis.
         <br>
         <pre><code class="language-js">
     // exemplo de rotas
     const routes = [{ path: '/login', component: Login }]
-    </code></pre>
+  </code></pre>
+
       </li>
       <li>
         <b><span style="color:#0077B5;">Integração de frontend e backend:</span></b> Antes eu sabia consumir APIs em exemplos isolados, mas agora aprendi a integrar uma aplicação completa com autenticação e manipulação de dados reais.
@@ -292,10 +296,10 @@
         <pre><code class="language-js">
     // exemplo de consumo da API
     const res = await api.get('/auth/user')
-    </code></pre>
+  </code></pre>
       </li>
-      <li>
-        <b><span style="color:#6f42c1;">Controle de versão colaborativo (Git/GitHub):</span></b> Aprendi a criar branches organizadas e usar pull requests para integrar código sem conflitos, experiência prática que não tinha antes.
+  <li>
+  <b><span style="color:#6f42c1;">Controle de versão colaborativo (Git/GitHub):</span></b> Aprendi a criar branches organizadas e usar pull requests para integrar código sem conflitos, experiência prática que não tinha antes.
         <br>
         <pre><code class="language-bash">
     git checkout -b feature/nova-funcionalidade
@@ -305,12 +309,11 @@
       <li>
         <b><span style="color:#e34c26;">Modelagem e consultas SQL no PostgreSQL:</span></b> Ganhei prática em criar queries otimizadas e pensar em performance, diferente de quando só usava queries simples em estudos.
         <br>
-        <pre><code class="language-sql">
-    SELECT * FROM vendas WHERE data >= NOW() - INTERVAL '7 days';
+        
+    <pre><code class="language-sql">
+      SELECT * FROM vendas WHERE data >= NOW() - INTERVAL '7 days';
     </code></pre>
-      </li>
-    </ul>
-
-    ---
-
+  
+  </li>
+</ul>
 </details>
