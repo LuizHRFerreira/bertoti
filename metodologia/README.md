@@ -1,7 +1,7 @@
 <div align="center">
   <!-- Banner (opcional, mas adiciona um toque profissional) -->
   <!-- Substitua 'LINK_PARA_SEU_BANNER' pela URL da sua imagem de banner, se tiver uma. -->
-  <img src="assets/header.png" alt="Banner do Portfólio" style="width:100%; max-width:1000px;">
+  <img src="assets/Header.png" alt="Banner do Portfólio" style="width:100%; max-width:1000px;">
   <br>
   <br>
   
@@ -65,105 +65,194 @@
     <img src="assets/tecnologias.png" style="border-radius: 20px">
   </div>
 
-  ## Contribuições Pessoais
+  <h2>Contribuições Pessoais</h2>
+  <details>
+    <summary>📌 Estruturação do projeto em Vue.js</summary>
+    
+  <p align="justify">
+    - Organizei as pastas, defini rotas e criei padrões de código para garantir consistência no projeto.
+    - Estruturei os layouts principais e componentes reutilizáveis.
+  </p>
+  <p align="justify"><b>Trecho do arquivo de rotas:</b></p>
+    
+    <pre><code class="language-js">
+    import UserPage from '@/views/users/UserIndex.vue';
+    import Test from '@/components/Test.vue';
+    import LoginPage from '@/views/auth/AuthIndex.vue';
+    import admintLayout from "@/layout/AdmintLayout.vue";
+    import PositionPage from '@/views/position/PositionIndex.vue';
 
-<details>
-  <summary>📌 Estruturação do projeto em Vue.js</summary>
+    const routes = [
+      {
+        path: '/',
+        name: 'Login',
+        component: LoginPage,
+      },
+      {
+        path: '/home',
+        name: 'Home',
+        meta: { requiresAuth: true },
+        component: admintLayout,
+        children: [
+          {
+            path: '',
+            component: HomePage
+          }
+        ]
+      },
+      {
+        path: '/user',
+        component: AdminLayout,
+        meta: { requiresAuth: true },
+        children: [
+          {
+            path: '',
+            component: UserPage,
+          },
+        ],
+      }
+      ...
+    ];
+  </code></pre>
 
-  - Organizei as pastas, defini rotas e criei padrões de código para garantir consistência no projeto.  
-  - Estruturei os layouts principais e componentes reutilizáveis.  
-  - Configurei guardas de rota para lidar com autenticação.  
-  - Padronizei o uso de props e eventos entre componentes.  
+  <p align="justify"><b>Captura de organização de pastas:</b></p>
+  <!-- Substitua 'LINK_DA_IMAGEM_ORGANIZACAO_PASTAS' pela URL da imagem de organização de pastas. -->
+  <img src="https://github.com/user-attachments/assets/2a019ee0-b8f1-48fc-8f33-299a00ed62a6" alt="Organização de Pastas" style="width:100%; max-width:388px;">
+  </details>
 
-  **Trecho do arquivo de rotas:**
-  ```js
-  {
-    path: '/dashboard',
-    name: 'Dashboard',
-    meta: { requiresAuth: true },
-    component: AdminLayout,
-    children: [
-      { path: 'users', component: UserPage },
-      { path: 'positions', component: PositionPage }
-    ]
-  }
-  ```
+  <details>
+    <summary>📌 Integração do frontend com o backend</summary>
 
-  **Organização de pastas:**
+  <p align="justify">
+    - Implementei a comunicação com a API, consumindo endpoints para exibição e manipulação de dados.
+    - Configurei interceptadores de requisição/resposta para lidar com autenticação e erros.
+  </p>
+  <p align="justify"><b>Trecho do arquivo `TimeRecordService`:</b></p>
+  <pre>
+              
+    <code class="language-js">
+    import axios from 'axios';
+    import UserService from './UserService';
+
+    const API_URL = 'http://localhost:8080/api/timerecords';
+
+    const formatToLocalDateTimeString = (dateInput) => {
+      let date;
+
+      if (dateInput instanceof Date) {
+        date = dateInput;
+      } else if (typeof dateInput === 'string') {
+        if (/^\d{4}-\d{2}-\d{2}$/.test(dateInput)) {
+          return `${dateInput}`;
+        }
+        date = new Date(dateInput);
+      } else {
+        console.warn("Tipo de data inválido recebido:", dateInput);
+        return null;
+      }
+
+      if (!date || isNaN(date.getTime())) {
+        console.warn("Não foi possível parsear a data:", dateInput);
+        return null;
+      }
+    };
+</code></pre>
+  </details>
+  <details>
+    <summary>📌 Contribuições no backend</summary>
   
-  ![Organização de Pastas](https://github.com/user-attachments/assets/2a019ee0-b8f1-48fc-8f33-299a00ed62a6)
+  <p align="justify">
+    - Criação de classes e services.
+    - Integração com banco online <b>Supabase</b>.
+  </p>
+  <p align="justify"><b>Trecho da classe `EmployeeController`:</b></p>
+    
+    <pre><code class="language-java">
+    public class EmployeeController {
+        @Autowired
+        private final EmployeeService employeeService;
+        private final SupabaseStorageService supabaseStorageService;
 
-  <img src="assets/navegacao.gif">
-</details>
+        public EmployeeController(EmployeeService employeeService, SupabaseStorageService supabaseStorageService) {
+            this.employeeService = employeeService;
+            this.supabaseStorageService = supabaseStorageService;
+        }
 
----
+        @PostMapping
+        public ResponseEntity<?> createEmployee(@RequestBody EmployeeDto employeeDto) {
+            try {
+                int employeeId = employeeService.createEmployee(employeeDto);
+                return ResponseEntity.status(HttpStatus.CREATED)
+                        .body(Map.of("id", employeeId));
+            } catch (IllegalArgumentException e) {
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                        .body(Map.of("message", e.getMessage()));
+            } catch (ResponseStatusException e) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                        .body(Map.of("message", e.getReason()));
+            } catch (Exception e) {
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                        .body(Map.of("message", "Erro ao criar um novo funcionário. Tente novamente."));
+            }
+        }
 
-<details>
-  <summary>📌 Integração do frontend com o backend</summary>
-
-  - Implementei a comunicação com a API, consumindo endpoints para exibição e manipulação de dados.  
-  - Configurei interceptadores de requisição/resposta para lidar com autenticação e erros.  
-  - Implementei feedback visual (loading/spinners e mensagens de erro).  
-  - Gerenciei estado global com Vuex/Pinia (quando necessário).  
-
-  **Exemplo de interceptador:**
-  ```js
-  api.interceptors.response.use(
-    response => response,
-    error => {
-      if (error.response.status === 401) {
-        router.push('/login')
-      }
-      return Promise.reject(error)
+        @PostMapping("/uploadPhoto")
+        public ResponseEntity<?> uploadEmployeePhoto(@RequestParam("file") MultipartFile file) {
+            try {
+                String photoUrl = supabaseStorageService.uploadEmployeePhoto(file);
+                return ResponseEntity.ok(Map.of("photoUrl", photoUrl));
+            } catch (Exception e) {
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                        .body(Map.of("message", "Erro no upload de foto"));
+            }
+        }
     }
-  )
-  ```
+    
+  </code></pre>
+        
+    <p align="justify"><b>Trecho do `application.properties`:</b></p>
+    <pre><code class="language-properties">
+    spring.jpa.database=postgresql
+    spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+    spring.jpa.hibernate.ddl-auto=none
+    spring.jpa.show-sql=true
 
-   <div align="center">
-    <img src="assets/datatable.png" style="border-radius: 20px">
-  </div>
-</details>
+    supabase.auth.token=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+    spring.datasource.url=jdbc:postgresql://aws-0-sa-east-1.pooler.supa...
+    spring.datasource.username=postgres...
+    spring.datasource.password=********
+    spring.datasource.driver-class-name=org.postgresql.Driver
+  </code></pre>
+  </details>
+  <details>
+        <summary>📌 Criação da folha de ponto</summary>
+    
+  <p align="justify">
+    - Criação da lógica por calculo e impressão dos pontos em telas
+  </p>
+  <p align="justify"><b>Trecho de TimeReconrdIndex.vue</b></p>
 
----
+    <pre><code class="language-js">
+    computed: {
+    // Lista os funcionarios no select
+    employeeslist() {
+      return this.employees.map((employee) => ({
+        id: employee.id,
+        name: employee.name,
+      }));
+    },
+    hasAnyEntrada2() {
+        return this.processedTimeRecords.some(record => record.entrada2);
+    },
+    hasAnyEntrada3() {
+        return this.processedTimeRecords.some(record => record.entrada3);
+    },
 
-<details>
-  <summary>📌 Contribuições no backend</summary>
+    totalWorkedPeriod() {
+    if (!this.processedTimeRecords || this.processedTimeRecords.length === 0) {
+      return '00:00';
+    }
 
-  - Criação de classes e services.  
-  - Integração com banco online **Supabase**.  
-  - Implementação de endpoints REST seguros e bem estruturados.  
-  - Upload de arquivos para storage e retorno de URL pública.  
-
-  **Trecho da classe `EmployeeController`:**
-  ```java
-  @PostMapping("/uploadPhoto")
-  public ResponseEntity<?> uploadEmployeePhoto(@RequestParam("file") MultipartFile file) {
-      try {
-          String photoUrl = supabaseStorageService.uploadEmployeePhoto(file);
-          return ResponseEntity.ok(Map.of("photoUrl", photoUrl));
-      } catch (Exception e) {
-          return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                  .body(Map.of("message", "Erro no upload de foto"));
-      }
-  }
-  ```
-
-  ⚡ *Sugestão:* adicionar um **print ou GIF do upload de foto funcionando** no frontend (antes/depois da imagem aparecer).
-</details>
-
----
-
-<details>
-  <summary>📌 Criação da folha de ponto</summary>
-
-  - Desenvolvi a lógica de cálculo automático de horas trabalhadas.  
-  - Criei visualização com totalizadores (horas do dia e horas acumuladas).  
-  - Implementei controles dinâmicos (campos extras aparecem somente quando usados).  
-  - Adicionei exportação dos registros em formato visual.  
-
-  **Exemplo de cálculo total:**
-  ```js
-  totalWorkedPeriod() {
     const totalMinutes = this.processedTimeRecords.reduce((sum, record) => {
       const [hours, minutes] = record.totalTrabalhadoDia.split(':').map(Number);
       return sum + (hours * 60) + minutes;
@@ -172,42 +261,53 @@
     const hours = Math.floor(totalMinutes / 60);
     const minutes = totalMinutes % 60;
     return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
-  }
-  ```
-
-  ⚡ *Sugestão:* inserir um **GIF mostrando a folha de ponto em ação** (seleção de funcionário → registros → cálculo automático).
+    },
+  </code></pre>
 </details>
+  
+  ---
+  
+  ## Aprendizados
+  <div align="center">
+      <p>Habilidades e conhecimentos que adquiri e aprimorei:</p>
+    </div>
+  <p align="justify">
+      Além de aplicar conhecimentos prévios, também desenvolvi novas habilidades ao longo dos projetos:
+    </p>
+  <ul>
+      <li>
+        <b><span style="color:#28A745;">Vue.js em projetos reais:</span></b> Aprendi a lidar com a organização e escalabilidade de um frontend em produção, pois precisei estruturar rotas, layouts e componentes reutilizáveis.
+        <br>
+        <pre><code class="language-js">
+    // exemplo de rotas
+    const routes = [{ path: '/login', component: Login }]
+  </code></pre>
 
----
-
-## Aprendizados
-
-Habilidades e conhecimentos que adquiri e aprimorei:
-
-- **Vue.js em projetos reais:** organização e escalabilidade de frontend em produção.  
-  ```js
-  const routes = [{ path: '/login', component: Login }]
-  ```
-
-- **Integração de frontend e backend:** consumo de APIs com autenticação e dados reais.  
-  ```js
-  const res = await api.get('/auth/user')
-  ```
-
-- **Controle de versão colaborativo (Git/GitHub):** branches organizadas e pull requests sem conflitos.  
-  ```bash
-  git checkout -b feature/nova-funcionalidade
-  git commit -m "feat: adiciona nova funcionalidade"
-  ```
-
-- **Modelagem e consultas SQL no PostgreSQL:** criação de queries otimizadas e com foco em performance.  
-  ```sql
-  SELECT * FROM vendas WHERE data >= NOW() - INTERVAL '7 days';
-  ```
-
----
-
-⚡ **Dica geral para o portfólio:**  
-- Use **prints fixos** para organização/estruturas.  
-- Use **GIFs curtos (5–10s)** para interações (login, upload, cálculo dinâmico).  
-- Combine código + resultado visual sempre que possível.  
+      </li>
+      <li>
+        <b><span style="color:#0077B5;">Integração de frontend e backend:</span></b> Antes eu sabia consumir APIs em exemplos isolados, mas agora aprendi a integrar uma aplicação completa com autenticação e manipulação de dados reais.
+        <br>
+        <pre><code class="language-js">
+    // exemplo de consumo da API
+    const res = await api.get('/auth/user')
+  </code></pre>
+      </li>
+  <li>
+  <b><span style="color:#6f42c1;">Controle de versão colaborativo (Git/GitHub):</span></b> Aprendi a criar branches organizadas e usar pull requests para integrar código sem conflitos, experiência prática que não tinha antes.
+        <br>
+        <pre><code class="language-bash">
+    git checkout -b feature/nova-funcionalidade
+    git commit -m "feat: adiciona nova funcionalidade"
+    </code></pre>
+      </li>
+      <li>
+        <b><span style="color:#e34c26;">Modelagem e consultas SQL no PostgreSQL:</span></b> Ganhei prática em criar queries otimizadas e pensar em performance, diferente de quando só usava queries simples em estudos.
+        <br>
+        
+    <pre><code class="language-sql">
+      SELECT * FROM vendas WHERE data >= NOW() - INTERVAL '7 days';
+    </code></pre>
+  
+  </li>
+</ul>
+</details>
