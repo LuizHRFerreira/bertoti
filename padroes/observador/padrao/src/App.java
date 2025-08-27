@@ -10,7 +10,6 @@ public class App {
         agencia.adicionarObservador(app);
         agencia.adicionarObservador(email);
 
-        // Publicando uma manchete
         Manchete manchete = new Manchete(
                 "Terremoto atinge costa leste",
                 "Um terremoto de magnitude 5.8 foi registrado hoje.",
@@ -18,7 +17,6 @@ public class App {
         );
         agencia.publicarManchete(manchete);
 
-        // Removendo o site e publicando outra manchete
         agencia.removerObservador(site);
         Manchete novaManchete = new Manchete(
                 "Novo recorde na bolsa",

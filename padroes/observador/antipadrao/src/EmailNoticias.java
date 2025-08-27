@@ -5,7 +5,7 @@ public class EmailNoticias {
     public void adicionarNaLista(String titulo, String conteudo, String data) {
         manchetes[totalManchetes] = titulo + " | " + conteudo + " | " + data;
         totalManchetes++;
-        System.out.println("E-mail (duplicado): Manchete armazenada - " + titulo + ", total: " + totalManchetes);
+        System.out.println("E-mail: Manchete armazenada - " + titulo + ", total: " + totalManchetes);
     }
 
     public int getTotal() {

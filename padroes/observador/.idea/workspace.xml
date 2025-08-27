@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="14c62b76-de34-423f-9144-e592f2778deb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../metodologia/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../metodologia/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../composto/padrao/src/ElencoFutebol.java" beforeDir="false" afterPath="$PROJECT_DIR$/../composto/padrao/src/ElencoFutebol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../composto/padrao/src/app.java" beforeDir="false" afterPath="$PROJECT_DIR$/../composto/padrao/src/app.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../composto/padrao/src/jogador.java" beforeDir="false" afterPath="$PROJECT_DIR$/../composto/padrao/src/jogador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../composto/padrao/src/time.java" beforeDir="false" afterPath="$PROJECT_DIR$/../composto/padrao/src/time.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antipadrao/src/AgenciaNoticias.java" beforeDir="false" afterPath="$PROJECT_DIR$/antipadrao/src/AgenciaNoticias.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antipadrao/src/AppMobile.java" beforeDir="false" afterPath="$PROJECT_DIR$/antipadrao/src/AppMobile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antipadrao/src/EmailNoticias.java" beforeDir="false" afterPath="$PROJECT_DIR$/antipadrao/src/EmailNoticias.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antipadrao/src/SiteNoticias.java" beforeDir="false" afterPath="$PROJECT_DIR$/antipadrao/src/SiteNoticias.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antipadrão/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/antipadrão/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/antipadrão/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/antipadrão/Diagrama de uso antipadrão.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/antipadrão/antipadrão.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/antipadrão/src/Estacao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/antipadrão/src/Historico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/antipadrão/src/Previsao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/padrao/Diagrama de uso padrão.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/padrao/Diagrama de uso padrão.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/padrao/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/padrao/src/App.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="31sTH13QcUIFzRDGTQIWicoOaDn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14c62b76-de34-423f-9144-e592f2778deb" name="Changes" comment="" />
+      <created>1756311690843</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756311690843</updated>
+      <workItem from="1756311693046" duration="429000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

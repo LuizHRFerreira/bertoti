@@ -1,4 +1,14 @@
-package PACKAGE_NAME;
+class Jogador implements MembroTime {
+    private String nome;
+    private String posicao;
 
-public class jogador {
+    public Jogador(String nome, String posicao) {
+        this.nome = nome;
+        this.posicao = posicao;
+    }
+
+    @Override
+    public void mostrar() {
+        System.out.println(posicao + ": " + nome);
+    }
 }

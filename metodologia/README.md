@@ -283,47 +283,51 @@
   
   ---
   
-  ## Aprendizados
-  <div align="center">
-      <p>Habilidades e conhecimentos que adquiri e aprimorei:</p>
-    </div>
+## Aprendizados
+
+<details>
+  <summary>📌 <b>Vue.js em projetos reais:</b></summary>
   <p align="justify">
-      Além de aplicar conhecimentos prévios, também desenvolvi novas habilidades ao longo dos projetos:
-    </p>
-  <ul>
-      <li>
-        <b><span style="color:#28A745;">Vue.js em projetos reais:</span></b> Aprendi a lidar com a organização e escalabilidade de um frontend em produção, pois precisei estruturar rotas, layouts e componentes reutilizáveis.
-        <br>
-        <pre><code class="language-js">
+    Aprendi a lidar com a organização e escalabilidade de um frontend em produção, pois precisei estruturar rotas, layouts e componentes reutilizáveis.
+  </p>
+  <p align="justify"><b>Exemplo de rotas:</b></p>
+  <pre><code class="language-js">
     // exemplo de rotas
     const routes = [{ path: '/login', component: Login }]
   </code></pre>
+</details>
 
-      </li>
-      <li>
-        <b><span style="color:#0077B5;">Integração de frontend e backend:</span></b> Antes eu sabia consumir APIs em exemplos isolados, mas agora aprendi a integrar uma aplicação completa com autenticação e manipulação de dados reais.
-        <br>
-        <pre><code class="language-js">
+<details>
+  <summary>📌 <b>Integração de frontend e backend:</b></summary>
+  <p align="justify">
+    Antes eu sabia consumir APIs em exemplos isolados, mas agora aprendi a integrar uma aplicação completa com autenticação e manipulação de dados reais.
+  </p>
+  <p align="justify"><b>Exemplo de consumo da API:</b></p>
+  <pre><code class="language-js">
     // exemplo de consumo da API
     const res = await api.get('/auth/user')
   </code></pre>
-      </li>
-  <li>
-  <b><span style="color:#6f42c1;">Controle de versão colaborativo (Git/GitHub):</span></b> Aprendi a criar branches organizadas e usar pull requests para integrar código sem conflitos, experiência prática que não tinha antes.
-        <br>
-        <pre><code class="language-bash">
+</details>
+
+<details>
+  <summary>📌 <b>Controle de versão colaborativo (Git/GitHub):</b></summary>
+  <p align="justify">
+    Aprendi a criar branches organizadas e usar pull requests para integrar código sem conflitos, experiência prática que não tinha antes.
+  </p>
+  <p align="justify"><b>Exemplo de comandos Git:</b></p>
+  <pre><code class="language-bash">
     git checkout -b feature/nova-funcionalidade
     git commit -m "feat: adiciona nova funcionalidade"
-    </code></pre>
-      </li>
-      <li>
-        <b><span style="color:#e34c26;">Modelagem e consultas SQL no PostgreSQL:</span></b> Ganhei prática em criar queries otimizadas e pensar em performance, diferente de quando só usava queries simples em estudos.
-        <br>
-        
-    <pre><code class="language-sql">
-      SELECT * FROM vendas WHERE data >= NOW() - INTERVAL '7 days';
-    </code></pre>
-  
-  </li>
-</ul>
+  </code></pre>
+</details>
+
+<details>
+  <summary>📌 <b>Modelagem e consultas SQL no PostgreSQL:</b></summary>
+  <p align="justify">
+    Ganhei prática em criar queries otimizadas e pensar em performance, diferente de quando só usava queries simples em estudos.
+  </p>
+  <p align="justify"><b>Exemplo de consulta SQL:</b></p>
+  <pre><code class="language-sql">
+    SELECT * FROM vendas WHERE data >= NOW() - INTERVAL '7 days';
+  </code></pre>
 </details>
