@@ -50,22 +50,31 @@
 
 <details>
   <summary style="font-size: 1.2em; font-weight: bold;">Detalhes do Projeto</summary>
-  <h2>Introdução</h2>
+ 
+  <div align="center">
+    <img src="assets/Introduction-Header.png">
+  </div>
+
   <p align="justify">
     No terceiro semestre, desenvolvemos um sistema de ponto que batisamos de Pontual, uma aplicação web para monitorar horas trabalhadas de funcionários de empresas terceirizadas. Nosso cliente, a Altave, é uma empresa que atua com coleta de imagens e reconhecimento facial, começaram com balões meteorológicos e hoje trabalham com segurança, por exemplo, em plataformas petrolíferas.
   </p>
   <p align="justify">
     O caso que o cliente nos apresentou envolvia um estaleiro, onde empresas terceiras fazem manutenção em navios. As câmeras da Altave identificam os colaboradores e enviam essas informações para o sistema, que registra os pontos, calcula horas trabalhadas e gera o valor do salário individualmente.
   </p>
+  
   <p align="justify">
     No projeto, desenvolvemos uma interface para cadastro de empresas e profissionais, filtros de dados, extração de relatórios e dashboards interativos. Um dos desafios foi lidar com funcionários em escalas noturnas e permitir a edição de pontos.
   </p>
+
 
   <div align="center">
     <img src="assets/tecnologias.png" style="border-radius: 20px">
   </div>
 
-  <h2>Contribuições Pessoais</h2>
+  ---
+  <div align="center">
+    <img src="assets/Contribuition-Header.png">
+  </div><br>
   <details>
     <summary>🛠️ Estruturação do projeto em Vue.js</summary>
     
@@ -280,12 +289,13 @@
     <img src="assets/registro_de_ponto.gif" alt="Organização de Pastas">
   </div>
 </details>
+  <br>
   
-  ---
-  
-## Aprendizados
+  <div align="center">
+    <img src="assets/Learn-Header.png">
+  </div>
 
-### 💻 Hard Skills
+<h2> 💻 Hard Skills </h2>
 
 <details>
   <summary>🛠️ Vue.js e arquitetura de frontend</summary>
@@ -323,9 +333,7 @@
   </ul>
 </details>
 
-
-
-### 🤝 Soft Skills
+<h2> 🤝 Soft Skills </h2>
 
 <details>
   <summary>🌱 Colaboração em equipe</summary>
