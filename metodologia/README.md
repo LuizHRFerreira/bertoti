@@ -67,7 +67,7 @@
 
   <h2>Contribuições Pessoais</h2>
   <details>
-    <summary>📌 Estruturação do projeto em Vue.js</summary>
+    <summary>🛠️ Estruturação do projeto em Vue.js</summary>
     
   <p align="justify">
     - Organizei as pastas, defini rotas e criei padrões de código para garantir consistência no projeto.
@@ -122,7 +122,7 @@
   <hr>
   </details>
   <details>
-    <summary>📌 Integração do frontend com o backend</summary>
+    <summary>⚙️ Integração do frontend com o backend</summary>
 
   <p align="justify">
     - Implementei a comunicação com a API, consumindo endpoints para exibição e manipulação de dados.
@@ -166,7 +166,7 @@
   <hr>
   </details>
   <details>
-    <summary>📌 Contribuições no backend</summary>
+    <summary>🖥️ Contribuições no backend</summary>
   
   <p align="justify">
     - Criação de classes e services.
@@ -236,7 +236,7 @@
     </div>
   </details>
   <details>
-        <summary>📌 Criação da folha de ponto</summary>
+        <summary>🚀 Criação da folha de ponto</summary>
     
   <p align="justify">
     - Criação da lógica por calculo e impressão dos pontos em telas
@@ -283,47 +283,82 @@
   
   ---
   
-  ## Aprendizados
-  <div align="center">
-      <p>Habilidades e conhecimentos que adquiri e aprimorei:</p>
-    </div>
-  <p align="justify">
-      Além de aplicar conhecimentos prévios, também desenvolvi novas habilidades ao longo dos projetos:
-    </p>
-  <ul>
-      <li>
-        <b><span style="color:#28A745;">Vue.js em projetos reais:</span></b> Aprendi a lidar com a organização e escalabilidade de um frontend em produção, pois precisei estruturar rotas, layouts e componentes reutilizáveis.
-        <br>
-        <pre><code class="language-js">
-    // exemplo de rotas
-    const routes = [{ path: '/login', component: Login }]
-  </code></pre>
+## Aprendizados
 
-      </li>
-      <li>
-        <b><span style="color:#0077B5;">Integração de frontend e backend:</span></b> Antes eu sabia consumir APIs em exemplos isolados, mas agora aprendi a integrar uma aplicação completa com autenticação e manipulação de dados reais.
-        <br>
-        <pre><code class="language-js">
-    // exemplo de consumo da API
-    const res = await api.get('/auth/user')
-  </code></pre>
-      </li>
-  <li>
-  <b><span style="color:#6f42c1;">Controle de versão colaborativo (Git/GitHub):</span></b> Aprendi a criar branches organizadas e usar pull requests para integrar código sem conflitos, experiência prática que não tinha antes.
-        <br>
-        <pre><code class="language-bash">
-    git checkout -b feature/nova-funcionalidade
-    git commit -m "feat: adiciona nova funcionalidade"
-    </code></pre>
-      </li>
-      <li>
-        <b><span style="color:#e34c26;">Modelagem e consultas SQL no PostgreSQL:</span></b> Ganhei prática em criar queries otimizadas e pensar em performance, diferente de quando só usava queries simples em estudos.
-        <br>
-        
-    <pre><code class="language-sql">
-      SELECT * FROM vendas WHERE data >= NOW() - INTERVAL '7 days';
-    </code></pre>
-  
-  </li>
-</ul>
+### 💻 Hard Skills
+
+<details>
+  <summary>🛠️ Vue.js e arquitetura de frontend</summary>
+  <ul>
+    <li>Aprendi a organizar rotas, layouts e componentes reutilizáveis em um projeto de médio porte.</li>
+    <li>Esse aprendizado veio da necessidade de manter a aplicação escalável, já que várias telas compartilhavam elementos comuns.</li>
+    <li>Isso ajudou o time a padronizar o código e reduzir retrabalho no desenvolvimento do frontend.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🛠️ Integração de frontend e backend</summary>
+  <ul>
+    <li>Desenvolvi a habilidade de consumir APIs reais e lidar com autenticação, erros e tratamento de dados.</li>
+    <li>Essa experiência veio principalmente da criação dos serviços de comunicação com a API no Vue.js.</li>
+    <li>No projeto, isso foi essencial para garantir que as telas exibissem informações atualizadas e funcionais para o cliente.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🛠️ Java Spring Boot e integração com banco de dados</summary>
+  <ul>
+    <li>Ganhei prática com a criação de controllers, services e integração com o Supabase.</li>
+    <li>Aprendi a lidar com persistência de dados em PostgreSQL e tratamento de exceções no backend.</li>
+    <li>Esse aprendizado foi crucial para estruturar o backend de forma confiável e segura, suportando as regras de negócio.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🛠️ SQL e consultas otimizadas</summary>
+  <ul>
+    <li>Melhorei minha escrita de queries no PostgreSQL, incluindo consultas com filtros de data e agregações.</li>
+    <li>Esse conhecimento veio da necessidade de gerar relatórios de horas trabalhadas e cálculos de folha de ponto.</li>
+    <li>Isso permitiu que o sistema apresentasse informações corretas e em tempo hábil para o cliente.</li>
+  </ul>
+</details>
+
+
+
+### 🤝 Soft Skills
+
+<details>
+  <summary>🌱 Colaboração em equipe</summary>
+  <ul>
+    <li>Auxiliei meus colegas de grupo no desenvolvimento de suas partes do projeto, oferecendo suporte técnico e sugestões.</li>
+    <li>Essa colaboração ajudou o time a manter o ritmo de trabalho e reduzir retrabalho.</li>
+    <li>Contribuiu para um ambiente mais coeso e eficiente durante todo o desenvolvimento.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🌱 Brainstorm e planejamento</summary>
+  <ul>
+    <li>Participei de sessões de brainstorming para definir quais telas e funcionalidades o sistema precisaria ter.</li>
+    <li>Ajudei a identificar soluções para fluxos complexos, como marcações de ponto que atravessam a meia-noite.</li>
+    <li>Essas decisões antecipadas facilitaram o desenvolvimento e reduziram possíveis retrabalhos.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🌱 Resolução de problemas complexos</summary>
+  <ul>
+    <li>Contribuí para encontrar soluções técnicas para situações desafiadoras, como horários noturnos e cálculos de ponto específicos.</li>
+    <li>Isso exigiu análise lógica e criatividade, garantindo que a aplicação funcionasse corretamente em todos os cenários.</li>
+    <li>Minimizou erros e melhorou a confiabilidade do sistema.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🌱 Organização e revisão de tarefas</summary>
+  <ul>
+    <li>Auxiliei na revisão e organização do código de colegas, mantendo padrões consistentes.</li>
+    <li>Isso ajudou a evitar conflitos e problemas de integração entre diferentes partes do sistema.</li>
+    <li>Contribuiu para a qualidade geral do projeto e facilitou o desenvolvimento colaborativo.</li>
+  </ul>
 </details>
