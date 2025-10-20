@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/observador/antipadrao/antipadrao.iml" filepath="$PROJECT_DIR$/observador/antipadrao/antipadrao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/estrategia/antipadrao/antipadrao2.iml" filepath="$PROJECT_DIR$/estrategia/antipadrao/antipadrao2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/composto/antipadrao/antipadrao3.iml" filepath="$PROJECT_DIR$/composto/antipadrao/antipadrao3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/observador/padrao/padrao.iml" filepath="$PROJECT_DIR$/observador/padrao/padrao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/estrategia/padrao/padrao2.iml" filepath="$PROJECT_DIR$/estrategia/padrao/padrao2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/composto/padrao/padrao3.iml" filepath="$PROJECT_DIR$/composto/padrao/padrao3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/padroes.iml" filepath="$PROJECT_DIR$/.idea/padroes.iml" />
+    </modules>
+  </component>
+</project>
