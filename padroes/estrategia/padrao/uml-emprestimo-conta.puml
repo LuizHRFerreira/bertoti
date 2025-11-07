@@ -1,0 +1,28 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Conta {
+  # titular : String
+  # saldo : double
+  - regraEmprestimo : Emprestimo
+  + setEmprestimo(emprestimo : Emprestimo) : void
+  + verificarEmprestiomo() : String
+}
+interface Emprestimo {
+}
+class Main {
+  ~ contaLuiz : Conta
+  ~ contaCarlos : Conta
+  + main(args : String[]) : void
+}
+class Permitido {
+  + emprestar() : String
+}
+Emprestimo <|.. Permitido
+class Proibido {
+  + emprestar() : String
+}
+Emprestimo <|.. Proibido
+Conta "1" *-- "*" Emprestimo : regraEmprestimo
+Main "1" *-- "*" Conta : contaLuiz
+Main "1" *-- "*" Conta : contaCarlos
+@enduml

@@ -1,0 +1,39 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Conta {
+  # titular : String
+  # saldo : double
+  ~ true : return
+  ~ false : return
+  + depositar(valor : double) : void
+  + sacar(valor : double) : boolean
+  + emprestimo(valor : double) : void
+}
+class ContaAposentado {
+  + emprestimo(valor : double) : void
+}
+Conta <|-- ContaAposentado
+class ContaComum {
+  + emprestimo(valor : double) : void
+}
+Conta <|-- ContaComum
+class ContaEmpresa {
+  + emprestimo(valor : double) : void
+}
+Conta <|-- ContaEmpresa
+class ContaEstudante {
+  + emprestimo(valor : double) : void
+}
+Conta <|-- ContaEstudante
+class Main {
+  ~ contaEmpresa : ContaEmpresa
+  ~ contaAposentado : ContaAposentado
+  ~ contaComum : ContaComum
+  ~ contaEstudante : ContaEstudante
+  + main(args : String[]) : void
+}
+Main "1" *-- "*" ContaEmpresa : contaEmpresa
+Main "1" *-- "*" ContaAposentado : contaAposentado
+Main "1" *-- "*" ContaComum : contaComum
+Main "1" *-- "*" ContaEstudante : contaEstudante
+@enduml

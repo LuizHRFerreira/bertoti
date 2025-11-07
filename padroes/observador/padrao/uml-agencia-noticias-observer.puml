@@ -1,0 +1,55 @@
+@startuml
+skinparam classAttributeIconSize 0
+class AgenciaNoticias {
+  - observadores : List<ObservadorNoticia>
+  - ultimaManchete : Manchete
+  + adicionarObservador(observador : ObservadorNoticia) : void
+  + removerObservador(observador : ObservadorNoticia) : void
+  + publicarManchete(manchete : Manchete) : void
+  - notificar() : void
+}
+class App {
+  ~ agencia : AgenciaNoticias
+  ~ site : ObservadorNoticia
+  ~ app : ObservadorNoticia
+  ~ email : ObservadorNoticia
+  ~ manchete : Manchete
+  ~ novaManchete : Manchete
+  + main(args : String[]) : void
+}
+class AppMobile {
+  + atualizar(manchete : Manchete) : void
+}
+ObservadorNoticia <|.. AppMobile
+class EmailNoticias {
+  - manchetesPendentes : List<Manchete>
+  + atualizar(manchete : Manchete) : void
+}
+ObservadorNoticia <|.. EmailNoticias
+class Manchete {
+  - titulo : String
+  - conteudo : String
+  - dataPublicacao : String
+  ~ titulo : return
+  ~ conteudo : return
+  ~ dataPublicacao : return
+  + getTitulo() : String
+  + getConteudo() : String
+  + getDataPublicacao() : String
+}
+interface ObservadorNoticia {
+}
+class SiteNoticias {
+  + atualizar(manchete : Manchete) : void
+}
+ObservadorNoticia <|.. SiteNoticias
+AgenciaNoticias "1" o-- "*" ObservadorNoticia : observadores
+AgenciaNoticias "1" *-- "*" Manchete : ultimaManchete
+App "1" *-- "*" AgenciaNoticias : agencia
+App "1" *-- "*" ObservadorNoticia : site
+App "1" *-- "*" ObservadorNoticia : app
+App "1" *-- "*" ObservadorNoticia : email
+App "1" *-- "*" Manchete : manchete
+App "1" *-- "*" Manchete : novaManchete
+EmailNoticias "1" o-- "*" Manchete : manchetesPendentes
+@enduml

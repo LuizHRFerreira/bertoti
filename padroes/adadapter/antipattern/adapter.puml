@@ -1,0 +1,40 @@
+@startuml
+title Adapter Pattern (Target/Adaptee/Adapter)
+
+interface Peg {
+  +getEffectiveRadius() : double
+}
+
+class RoundPeg implements Peg {
+  -radius : double
+  +getEffectiveRadius() : double
+}
+
+class SquarePeg {
+  -width : double
+  +getWidth() : double
+}
+
+class SquarePegAdapter implements Peg {
+  -adaptee : SquarePeg
+  +getEffectiveRadius() : double
+}
+
+class RoundHole {
+  -radius : double
+  +fits(p : Peg) : boolean
+}
+
+class Client
+
+RoundPeg -up-|> Peg
+SquarePegAdapter -up-|> Peg
+SquarePegAdapter --> SquarePeg : compõe
+RoundHole --> Peg : usa
+Client --> RoundHole
+Client --> Peg
+
+note right of SquarePegAdapter
+  r_equivalente = (width * sqrt(2)) / 2
+end note
+@enduml
