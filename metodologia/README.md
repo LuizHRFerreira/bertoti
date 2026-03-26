@@ -255,6 +255,177 @@
   </details>
 </details>
 
+<!-- 2º Semestre -->
+<hr>
+<div align="center">
+ <h1>2º Semestre • 2/2024</h1>
+</div>
+
+<div align="center">
+  <h3><a href="https://github.com/Steam-Ducks/pacer-assessment-system" target="_blank">PACER Assessment System</a></h3>
+  <p><i>Sistema desktop desenvolvido para apoiar a avaliação de integrantes de equipe com base em critérios definidos pelo administrador, incluindo autenticação, gestão de grupos, critérios e relatórios.</i></p>
+  <br>
+  <img src="assets/2_semestre/pacer-tela-principal.png" alt="Tela principal do PACER Assessment System" style="width:80%; max-width:700px; border-radius: 8px; border: 1px solid #555;">
+  <br>
+  <p>
+    <a href="https://github.com/Steam-Ducks/pacer-assessment-system" target="_blank">
+      <img src="https://img.shields.io/badge/Repositório%20no%20GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo">
+    </a>
+  </p>
+</div>
+
+<details>
+  <summary style="font-size: 1.2em; font-weight: bold;">Detalhes do Projeto</summary>
+
+  <div align="center">
+    <img src="assets/Introduction-Header.png">
+  </div>
+
+  <p align="justify">
+    No segundo semestre de 2024, desenvolvemos o <b>PACER Assessment System</b>, um sistema desktop criado para permitir a avaliação de integrantes de grupo com base em critérios previamente definidos. O projeto foi construído em contexto acadêmico e tinha como objetivo tornar o processo de avaliação mais estruturado, transparente e organizado.
+  </p>
+
+  <p align="justify">
+    A aplicação contemplava funcionalidades como autenticação de usuários, gerenciamento de grupos, definição de critérios de avaliação, cadastro de sprints e geração de relatórios. Além disso, o projeto também envolveu uma etapa importante de modelagem de dados e documentação, garantindo que a solução estivesse bem definida tanto do ponto de vista funcional quanto estrutural.
+  </p>
+
+  <p align="justify">
+    Neste projeto, atuei como <b>Product Owner</b>, sendo responsável por apoiar a organização do produto e por manter a documentação atualizada ao longo do desenvolvimento. Minha atuação esteve mais concentrada na definição e acompanhamento dos artefatos do projeto do que na implementação em código, contribuindo para que o time tivesse clareza sobre a evolução das entregas e sobre a visão geral do sistema.
+  </p>
+
+  <div align="center">
+    <img src="assets/2_semestre/pacer-tela-avaliacao.png" style="border-radius: 20px" alt="Tela de avaliação do PACER Assessment System">
+  </div>
+
+  <br>
+
+  <div align="center">
+    <img src="assets/Contribuition-Header.png">
+  </div>
+
+  <br>
+
+  <details>
+    <summary>🛠️ Atuação como Product Owner na organização do produto</summary>
+    <hr>
+    <p align="justify">
+      Minha principal contribuição neste projeto foi atuar como Product Owner, ajudando a organizar a visão do produto ao longo do semestre. Essa atuação envolveu acompanhar a estrutura geral do sistema, apoiar a definição das entregas e manter coerência entre o que estava sendo desenvolvido e o que o projeto precisava entregar.
+    </p>
+
+  <p align="justify">
+    Como o sistema possuía diferentes módulos — como autenticação, grupos, critérios, sprints e relatórios — foi importante garantir que a evolução das funcionalidades estivesse alinhada ao objetivo central da aplicação. Essa experiência me ajudou a entender melhor a responsabilidade de organizar o produto para o time e acompanhar sua construção de forma mais estratégica.
+  </p>
+
+  <div align="center">
+    <p align="justify"><b>Exemplo visual:</b></p>
+    <img src="assets/2_semestre/pacer-tela-principal.png" alt="Tela principal do sistema">
+  </div>
+  </details>
+
+  <br>
+
+  <details>
+    <summary>🛠️ Documentação contínua do projeto</summary>
+    <hr>
+    <p align="justify">
+      Outra contribuição importante foi a manutenção da documentação do projeto ao longo do desenvolvimento. Pelo histórico do repositório, minha participação esteve fortemente ligada à atualização do README, organização de arquivos e publicação de artefatos importantes para apresentação e entendimento do sistema.
+    </p>
+
+  <p align="justify">
+    Esse trabalho foi relevante porque ajudou a consolidar a visão do projeto, registrar sua evolução e tornar mais fácil a comunicação das funcionalidades e requisitos para quem fosse consultar o repositório. Além disso, a documentação também teve papel importante na apresentação acadêmica do sistema e na formalização dos resultados da equipe.
+  </p>
+
+  <div align="center">
+    <p align="justify"><b>Exemplo visual:</b></p>
+    <img src="assets/2_semestre/pacer-documentacao.png" alt="Documentação do projeto PACER">
+  </div>
+  </details>
+
+  <br>
+
+  <details>
+    <summary>🛠️ Organização de artefatos de acompanhamento e planejamento</summary>
+    <hr>
+    <p align="justify">
+      Também contribuí com a organização de artefatos que apoiavam o acompanhamento do projeto, como gráficos de burndown, wireframes e outros materiais visuais e estruturais. Esses elementos eram importantes para acompanhar a evolução das entregas e comunicar melhor o planejamento e a proposta da solução.
+    </p>
+
+  <p align="justify">
+    O wireframe ajudava a representar visualmente a estrutura esperada do sistema, enquanto o burndown funcionava como evidência do acompanhamento do progresso das sprints. Esse tipo de contribuição reforçou minha atuação mais voltada à organização do produto, planejamento e acompanhamento do time.
+  </p>
+
+  <div align="center">
+    <p align="justify"><b>Exemplos visuais:</b></p>
+    <img src="assets/2_semestre/pacer-burndown.png" alt="Burndown do projeto PACER">
+  </div>
+  </details>
+  
+  <br>
+
+  <div align="center">
+    <img src="assets/Learn-Header.png">
+  </div>
+
+  <h2> 💻 Hard Skills </h2>
+
+  <details>
+    <summary>🛠️ Documentação de Software</summary>
+    <ul>
+      <li>Desenvolvi maior familiaridade com a organização e manutenção de documentação de software ao longo do projeto.</li>
+      <li>Aprendi a estruturar informações importantes no README e em outros artefatos para registrar a evolução do produto.</li>
+      <li>Esse aprendizado foi importante para entender como a documentação contribui para comunicação, apresentação e continuidade do projeto.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🛠️ Modelagem e visão estrutural de sistemas</summary>
+    <ul>
+      <li>Acompanhei artefatos como DER, wireframes e estrutura funcional do sistema.</li>
+      <li>Esse contato me ajudou a desenvolver uma visão mais ampla sobre como os requisitos do produto se conectam com a modelagem e a solução implementada.</li>
+      <li>Foi uma experiência importante para fortalecer minha leitura de artefatos técnicos mesmo sem atuar diretamente na codificação.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🛠️ Gestão de Produto em contexto ágil</summary>
+    <ul>
+      <li>Aprendi melhor como acompanhar a evolução de um produto em sprints, organizando artefatos e apoiando a priorização das entregas.</li>
+      <li>Esse contato ampliou minha compreensão sobre o papel do Product Owner dentro de um time.</li>
+      <li>Também me ajudou a entender melhor a importância de clareza, organização e acompanhamento contínuo no desenvolvimento.</li>
+    </ul>
+  </details>
+
+  <h2> 🤝 Soft Skills </h2>
+
+  <details>
+    <summary>🌱 Organização</summary>
+    <ul>
+      <li>Desenvolvi mais organização ao lidar com documentação, artefatos e acompanhamento do produto.</li>
+      <li>Essa habilidade foi essencial para manter a visão do projeto clara ao longo do semestre.</li>
+      <li>Também contribuiu para que a comunicação com a equipe fosse mais objetiva e estruturada.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🌱 Comunicação com a equipe</summary>
+    <ul>
+      <li>Atuar como Product Owner exigiu comunicação constante para alinhar entendimento sobre o produto e suas entregas.</li>
+      <li>Aprendi a traduzir melhor a necessidade do sistema em informações úteis para o time.</li>
+      <li>Essa experiência fortaleceu minha capacidade de mediação e alinhamento em grupo.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🌱 Visão de produto</summary>
+    <ul>
+      <li>Aprendi a observar o projeto de uma perspectiva mais ampla, indo além da implementação técnica.</li>
+      <li>Essa vivência me ajudou a entender melhor a importância de pensar no sistema como produto, com propósito, organização e coerência entre suas partes.</li>
+      <li>Foi um passo importante para desenvolver mais senso de prioridade e direção dentro do projeto.</li>
+    </ul>
+  </details>
+
+</details>
+
 ---
 <!-- 3º Semestre -->
 <div align="center">
