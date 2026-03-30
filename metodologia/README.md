@@ -803,11 +803,57 @@
       Uma das minhas principais contribuições no projeto foi a implementação da autenticação e do fluxo de acesso ao sistema. No frontend, atuei na criação da página de login, na lógica de autenticação e no fluxo de logout. No backend, trabalhei na configuração de autenticação, proteção de endpoints e resolução de conflitos relacionados ao acesso.
     </p>
 
-  <p align="justify"><b>Trecho do código:</b></p>
-  <pre><code class="language-ts">// Cole aqui um trecho real do login/logout ou autenticação do frontend</code></pre>
+  <p align=\"justify\"><b>Trecho do código frontend (LoginScript.ts):</b></p>
+  <pre><code class=\"language-ts\">export function useLogin() {
+  const nome = ref('');
+  const senha = ref('');
+  const erro = ref('');
+  const store = usuarioStore();
+  const router = useRouter();
 
-  <p align="justify"><b>Trecho do código backend:</b></p>
-  <pre><code class="language-java">// Cole aqui um trecho real da configuração de autenticação / security</code></pre>
+  async function onSubmit(e: Event) {
+    e.preventDefault();
+    erro.value = ''; // limpa mensagem antes de tentar login
+    try {
+      await store.login(nome.value, senha.value);
+      if (store.token) {
+        router.push('/admin');
+      } else {
+        erro.value = 'Usuário ou senha inválidos';
+      }
+    } catch {
+      erro.value = 'Usuário ou senha inválidos';
+    }
+  }
+
+  return { nome, senha, erro, onSubmit };
+}</code></pre>
+
+  <p align=\"justify\"><b>Trecho do código backend (SecurityConfig.java):</b></p>
+  <pre><code class=\"language-java\">@Configuration
+@EnableMethodSecurity
+public class SecurityConfig {
+    private final JwtAuthFilter jwtFilter;
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http, JwtAuthFilter jwt) throws Exception {
+        return http
+                .csrf(csrf -> csrf.disable())
+                .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers(\"/auth/**\", \"/error\").permitAll()
+                        .requestMatchers(\"/admin/**\").hasRole(\"ADMIN\")
+                        .anyRequest().permitAll()
+                )
+                .addFilterBefore(jwt, UsernamePasswordAuthenticationFilter.class)
+                .build();
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+}</code></pre>
 
   <div align="center">
     <p align="justify"><b>Exemplo visual:</b></p>
@@ -824,11 +870,75 @@
       Também atuei no desenvolvimento da área administrativa do sistema. No frontend, contribuí com a criação da página de administração, configuração do grid do dashboard e desenvolvimento de componentes ligados à gestão de usuários, cargos e mensagens. No backend, essa entrega foi complementada pela criação de recursos para listagem, edição e organização de usuários e papéis.
     </p>
 
-  <p align="justify"><b>Trecho do código:</b></p>
-  <pre><code class="language-ts">// Cole aqui um trecho real da tela admin, grid ou CRUD de usuários</code></pre>
+  <p align=\"justify\"><b>Trecho do código frontend (UserFormComponent.vue):</b></p>
+  <pre><code class=\"language-ts\">async function onSubmit() {
+  try {
+    loading.value = true;
+    error.value = null;
 
-  <p align="justify"><b>Trecho do código backend:</b></p>
-  <pre><code class="language-java">// Cole aqui um trecho real do controller/service de usuários ou roles</code></pre>
+    if (!form.username || !form.email) {
+      throw new Error('Preencha nome e email.');
+    }
+    if (props.mode === 'create' && (!form.password || form.password.length < 6)) {
+      throw new Error('Senha precisa ter ao menos 6 caracteres.');
+    }
+
+    let saved: User;
+
+    if (props.mode === 'create') {
+      const payload: UserPayload = {
+        username: form.username,
+        email: form.email,
+        phoneNumber: form.phoneNumber.replace(/\\D/g, ''),
+        password: form.password,
+        roleId: form.roleId,
+      };
+      saved = await UserService.register(payload);
+      successMsg.value = 'Usuário cadastrado com sucesso!';
+    } else {
+      saved = await UserService.update(props.userId!, {
+        username: form.username,
+        email: form.email,
+        phoneNumber: form.phoneNumber.replace(/\\D/g, ''),
+        password: form.password,
+        roleId: form.roleId,
+      });
+    }
+    emit('success', saved);
+  } catch (e: unknown) {
+    error.value = (e as Error).message || 'Erro na operação';
+  } finally {
+    loading.value = false;
+  }
+}</code></pre>
+
+  <p align=\"justify\"><b>Trecho do código backend (UserService.java):</b></p>
+  <pre><code class=\"language-java\">public ManagerResponseDTO createUser(ManagerRequestDTO requestDTO) {
+    Role adminRole = roleRepository.findByDescription(ADMIN_ROLE_DESCRIPTION)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, 
+            \"Role não encontrado.\"));
+
+    if (userRepository.existsByUsername(requestDTO.getUsername())) {
+        throw new ResponseStatusException(HttpStatus.CONFLICT, \"Username já existe.\");
+    }
+
+    String normalizedPhone = requestDTO.getPhoneNumber().replaceAll(\"\\\\D\", \"\");
+    if (normalizedPhone.length() != 11) {
+        throw new ResponseStatusException(HttpStatus.BAD_REQUEST, 
+        \"Número de telefone inválido (esperado 11 dígitos)\");
+    }
+
+    User newUser = new User();
+    newUser.setUsername(requestDTO.getUsername());
+    newUser.setEmail(requestDTO.getEmail());
+    newUser.setPassword(passwordEncoder.encode(requestDTO.getPassword()));
+    newUser.setPhoneNumber(normalizedPhone);
+    newUser.setEnabled(true);
+    newUser.setRole(adminRole);
+
+    User savedUser = userRepository.save(newUser);
+    return convertToResponseDTO(savedUser);
+}</code></pre>
 
   <div align="center">
     <p align="justify"><b>Exemplo visual:</b></p>
@@ -845,11 +955,71 @@
       Outra contribuição importante foi a integração entre frontend e backend para consumo e apresentação dos indicadores de tráfego. No frontend, trabalhei com serviços para buscar os níveis das zonas monitoradas e ajustar a interface para refletir corretamente os dados processados. No backend, contribuí com a configuração dos endpoints e com a lógica de cálculo e persistência dos indicadores regionais.
     </p>
 
-  <p align="justify"><b>Trecho do código:</b></p>
-  <pre><code class="language-ts">// Cole aqui um trecho real do service que consome níveis por zona</code></pre>
+  <p align="justify"><b>Trecho do código frontend (IndicatorService.ts):</b></p>
+  <pre><code class="language-ts">export interface HourlyIndicator {
+  hour: number
+  regionName: string
+  indicatorName: string
+  averageValue: number
+}
 
-  <p align="justify"><b>Trecho do código backend:</b></p>
-  <pre><code class="language-java">// Cole aqui um trecho real do cálculo ou endpoint dos indicadores</code></pre>
+class IndicatorService {
+  async getHourlyIndicators(): Promise<HourlyIndicator[]> {
+    const response = await axios.get<{ hourly: HourlyIndicator[] }>(
+      'http://localhost:8080/indicators/hourly'
+    )
+    return response.data.hourly
+  }
+
+  async getDailyIndicators(): Promise<DailyIndicator[]> {
+    const response = await axios.get<{ daily: (Omit<DailyIndicator, 'day'> & { day: string })[] }>(
+      'http://localhost:8080/indicators/daily'
+    )
+    return response.data.daily.map((item) => ({
+      ...item,
+      day: new Date(item.day),
+    }))
+  }
+
+  async getIndicatorsStatus() {
+    try {
+      return (await axios.get('http://localhost:8080/indicators/status')).data
+    } catch (ex) {
+      console.error('Erro ao buscar status: ', ex)
+    }
+  }
+}</code></pre>
+
+  <p align="justify"><b>Trecho do código backend (LevelService.java):</b></p>
+  <pre><code class="language-java">public List<ZoneLevelDTO> getLatestRegionLevels() {
+    List<Level> latestLevels = levelRepository.findTop6ByOrderByTimeDesc();
+
+    return latestLevels.stream().map(level -> {
+        Integer regionId = level.getRegion().getIdRegion();
+        String regionName = regionRepository.findById(regionId)
+                .map(Region::getName)
+                .orElse("Região Desconhecida");
+
+        Integer latestWeatherCode = getLatestWeatherCodeForRegion(regionId);
+        List<Object[]> cameraData = cameraRepository.findCamerasWithStatsForRegion(regionId);
+
+        List<Map<String, Object>> cameras = cameraData.stream()
+                .map(row -> {
+                    Map<String, Object> cameraMap = new HashMap<>();
+                    Double avgSpeed = ((Number) row[5]).doubleValue();
+                    
+                    cameraMap.put("id", row[0].toString());
+                    cameraMap.put("latitude", row[1]);
+                    cameraMap.put("longitude", row[2]);
+                    cameraMap.put("address", row[3]);
+                    cameraMap.put("averageSpeed", Math.round(avgSpeed * 100.0) / 100.0);
+                    
+                    return cameraMap;
+                }).collect(Collectors.toList());
+
+        return new ZoneLevelDTO(String.valueOf(regionId), regionName, level.getValue(), cameras, latestWeatherCode);
+    }).collect(Collectors.toList());
+}</code></pre>
 
   <div align="center">
     <p align="justify"><b>Exemplo visual:</b></p>
@@ -866,13 +1036,90 @@
       Também contribuí com partes relacionadas à persistência e ao tratamento dos dados recebidos pelo sistema. Entre essas entregas, estiveram o salvamento dos registros, o suporte à atualização periódica dos dados, a organização das tabelas e ajustes em estruturas usadas pelos indicadores e alertas.
     </p>
 
-  <p align="justify"><b>Trecho do código:</b></p>
-  <pre><code class="language-java">// Cole aqui um trecho real do salvamento dos registros, scheduler ou SpeedData</code></pre>
+  <p align="justify"><b>Trecho do código (SpeedDataImportJob.java - Scheduler):</b></p>
+  <pre><code class="language-java">@Component
+public class SpeedDataImportJob {
 
-  <div align="center">
-    <p align="justify"><b>Exemplo visual:</b></p>
-    <img src="assets/4_semestre/trafegou-alertas.png" alt="Tela de alertas e protocolos do Tráfegou!">
-  </div>
+    private final SpeedRecordService speedRecordService;
+    private final RegionIndicatorService regionIndicatorService;
+    private final LevelService levelService;
+
+    @Value("${server.role:MAIN}")
+    private String serverRole;
+
+    // Executa a cada 2 minutos para importar, processar e persistir dados
+    @Scheduled(cron = "0 */2 * * * ?")
+    public void execute() {
+        if (!"MAIN".equalsIgnoreCase(serverRole)) {
+            return;
+        }
+
+        System.out.println("Inicializado importação de registros!");
+
+        // Busca e substitui registros de velocidade
+        speedRecordService.fetchAndReplaceSpeedRecords();
+        
+        // Calcula indicadores regionais
+        regionIndicatorService.calculateAndSaveRegionIndicators();
+        
+        // Calcula e persiste níveis por região
+        levelService.calculateLevelsForAllRegions();
+
+        System.out.println("Finalizado importação de registros!");
+    }
+}
+
+// Entity Indicator.java
+@Entity
+@Table(name = "indicator")
+public class Indicator {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_indicator")
+    private Integer idIndicator;
+
+    @Column(name = "name", unique = true, nullable = false)
+    private String name;
+
+    @OneToMany(mappedBy = "indicator", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<RegionIndicator> regionIndicators = new ArrayList<>();
+
+    @OneToMany(mappedBy = "indicator", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Protocol> protocols = new ArrayList<>();
+
+    // getters e setters...
+}
+
+// Level.java (Entity para persistência dos níveis)
+@Entity
+@Table(name = "app_level")
+public class Level {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_level")
+    private Integer idLevel;
+
+    @Column(name = "value")
+    private Integer value;
+
+    @Column(name = "time")
+    private OffsetDateTime time;
+
+    @ManyToOne
+    @JoinColumn(name = "id_region", nullable = false)
+    private Region region;
+
+    public Level() {}
+
+    public Level(Integer value, OffsetDateTime time, Region region) {
+        this.value = value;
+        this.time = time;
+        this.region = region;
+    }
+
+    // getters e setters...
+}</code></pre>
+
   </details>
 
   <br>
