@@ -64,11 +64,8 @@
   </p>
 
   <div align="center">
-    <img src="assets/1_semestre/calculadora-cientifica-conversoes.png" style="border-radius: 20px" alt="Seção de conversões da Calculadora Científica">
+    <img src="assets/1_semestre/tecnologias.png" style="border-radius: 20px">
   </div>
-
-  <br>
-
   <div align="center">
     <img src="assets/Contribuition-Header.png">
   </div>
@@ -294,11 +291,8 @@
   </p>
 
   <div align="center">
-    <img src="assets/2_semestre/pacer-tela-avaliacao.png" style="border-radius: 20px" alt="Tela de avaliação do PACER Assessment System">
+    <img src="assets/2_semestre/tecnologias.png" style="border-radius: 20px">
   </div>
-
-  <br>
-
   <div align="center">
     <img src="assets/Contribuition-Header.png">
   </div>
@@ -459,10 +453,11 @@
   <p align="justify">
     No projeto, desenvolvemos uma interface para cadastro de empresas e profissionais, filtros de dados, extração de relatórios e dashboards interativos. Um dos desafios foi lidar com funcionários em escalas noturnas e permitir a edição de pontos.
   </p>
+
   <div align="center">
-    <img src="assets/tecnologias.png" style="border-radius: 20px">
+    <img src="assets/3_semestre/tecnologias.png" style="border-radius: 20px">
   </div>
-  ---
+  
   <div align="center">
     <img src="assets/Contribuition-Header.png">
   </div><br>
@@ -753,4 +748,204 @@
       <li>Contribuiu para a qualidade geral do projeto e facilitou o desenvolvimento colaborativo.</li>
     </ul>
   </details>
+</details>
+
+<hr>
+<div align="center">
+ <h1>4º Semestre • 2/2025</h1>
+</div>
+
+<div align="center">
+  <h3><a href="https://github.com/Steam-Ducks/traffic-monitoring-system" target="_blank">Tráfegou! - Monitoramento de Tráfego Inteligente</a></h3>
+  <p><i>Aplicação web full stack desenvolvida para monitorar indicadores de mobilidade urbana, classificar regiões por níveis de tráfego e apoiar a gestão de alertas e protocolos de ação.</i></p>
+  <br>
+  <img src="assets/4_semestre/trafegou-dashboard-principal.png" alt="Dashboard principal do projeto Tráfegou!" style="width:80%; max-width:700px; border-radius: 8px; border: 1px solid #555;">
+  <br>
+  <p>
+    <a href="https://github.com/Steam-Ducks/traffic-monitoring-system" target="_blank">
+      <img src="https://img.shields.io/badge/Repositório%20no%20GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo">
+    </a>
+  </p>
+</div>
+
+<details>
+  <summary style="font-size: 1.2em; font-weight: bold;">Detalhes do Projeto</summary>
+
+  <div align="center">
+    <img src="assets/Introduction-Header.png">
+  </div>
+
+  <p align="justify">
+    No quarto semestre de 2025, desenvolvemos o projeto <b>Tráfegou! - Monitoramento de Tráfego Inteligente</b>, uma aplicação web criada para apoiar o monitoramento contínuo da mobilidade urbana. O sistema foi pensado para consolidar indicadores de tráfego por região, atribuir níveis de monitoramento, gerar alertas automáticos e registrar protocolos de ação para apoio à tomada de decisão.
+  </p>
+
+  <p align="justify">
+    A solução foi construída com arquitetura full stack, utilizando <b>Vue.js 3 com TypeScript</b> no frontend, <b>Spring Boot com Java 17</b> no backend e integração com banco de dados relacional. Além disso, o projeto também contou com mapas interativos, dashboards, autenticação e processamento contínuo de dados.
+  </p>
+
+  <p align="justify">
+    Atuei como <b>desenvolvedor full stack</b>, contribuindo tanto na construção de telas e fluxos do frontend quanto na implementação de autenticação, segurança, controllers, integrações e persistência no backend. Minha participação se concentrou principalmente em autenticação de usuários, dashboard administrativo, CRUD de usuários e cargos, configuração de segurança da API, ingestão e tratamento de dados e integração entre camadas do sistema.
+  </p>
+
+  <div align="center">
+    <img src="assets/4_semestre/tecnologias.png" style="border-radius: 20px">
+  </div>
+  <div align="center">
+    <img src="assets/Contribuition-Header.png">
+  </div>
+
+  <br>
+
+  <details>
+    <summary>🛠️ Implementação da autenticação e fluxo de acesso</summary>
+    <hr>
+    <p align="justify">
+      Uma das minhas principais contribuições no projeto foi a implementação da autenticação e do fluxo de acesso ao sistema. No frontend, atuei na criação da página de login, na lógica de autenticação e no fluxo de logout. No backend, trabalhei na configuração de autenticação, proteção de endpoints e resolução de conflitos relacionados ao acesso.
+    </p>
+
+  <p align="justify"><b>Trecho do código:</b></p>
+  <pre><code class="language-ts">// Cole aqui um trecho real do login/logout ou autenticação do frontend</code></pre>
+
+  <p align="justify"><b>Trecho do código backend:</b></p>
+  <pre><code class="language-java">// Cole aqui um trecho real da configuração de autenticação / security</code></pre>
+
+  <div align="center">
+    <p align="justify"><b>Exemplo visual:</b></p>
+    <img src="assets/4_semestre/trafegou-login.png" alt="Tela de login do Tráfegou!">
+  </div>
+  </details>
+
+  <br>
+
+  <details>
+    <summary>🛠️ Criação do dashboard administrativo e gerenciamento de usuários e cargos</summary>
+    <hr>
+    <p align="justify">
+      Também atuei no desenvolvimento da área administrativa do sistema. No frontend, contribuí com a criação da página de administração, configuração do grid do dashboard e desenvolvimento de componentes ligados à gestão de usuários, cargos e mensagens. No backend, essa entrega foi complementada pela criação de recursos para listagem, edição e organização de usuários e papéis.
+    </p>
+
+  <p align="justify"><b>Trecho do código:</b></p>
+  <pre><code class="language-ts">// Cole aqui um trecho real da tela admin, grid ou CRUD de usuários</code></pre>
+
+  <p align="justify"><b>Trecho do código backend:</b></p>
+  <pre><code class="language-java">// Cole aqui um trecho real do controller/service de usuários ou roles</code></pre>
+
+  <div align="center">
+    <p align="justify"><b>Exemplo visual:</b></p>
+    <img src="assets/4_semestre/trafegou-admin-usuarios.png" alt="Tela administrativa de usuários e cargos">
+  </div>
+  </details>
+
+  <br>
+
+  <details>
+    <summary>🛠️ Integração full stack para indicadores de tráfego</summary>
+    <hr>
+    <p align="justify">
+      Outra contribuição importante foi a integração entre frontend e backend para consumo e apresentação dos indicadores de tráfego. No frontend, trabalhei com serviços para buscar os níveis das zonas monitoradas e ajustar a interface para refletir corretamente os dados processados. No backend, contribuí com a configuração dos endpoints e com a lógica de cálculo e persistência dos indicadores regionais.
+    </p>
+
+  <p align="justify"><b>Trecho do código:</b></p>
+  <pre><code class="language-ts">// Cole aqui um trecho real do service que consome níveis por zona</code></pre>
+
+  <p align="justify"><b>Trecho do código backend:</b></p>
+  <pre><code class="language-java">// Cole aqui um trecho real do cálculo ou endpoint dos indicadores</code></pre>
+
+  <div align="center">
+    <p align="justify"><b>Exemplo visual:</b></p>
+    <img src="assets/4_semestre/trafegou-indicadores.png" alt="Indicadores e níveis de tráfego por região">
+  </div>
+  </details>
+
+  <br>
+
+  <details>
+    <summary>🛠️ Persistência, tratamento e otimização de dados</summary>
+    <hr>
+    <p align="justify">
+      Também contribuí com partes relacionadas à persistência e ao tratamento dos dados recebidos pelo sistema. Entre essas entregas, estiveram o salvamento dos registros, o suporte à atualização periódica dos dados, a organização das tabelas e ajustes em estruturas usadas pelos indicadores e alertas.
+    </p>
+
+  <p align="justify"><b>Trecho do código:</b></p>
+  <pre><code class="language-java">// Cole aqui um trecho real do salvamento dos registros, scheduler ou SpeedData</code></pre>
+
+  <div align="center">
+    <p align="justify"><b>Exemplo visual:</b></p>
+    <img src="assets/4_semestre/trafegou-alertas.png" alt="Tela de alertas e protocolos do Tráfegou!">
+  </div>
+  </details>
+
+  <br>
+
+  <div align="center">
+    <img src="assets/Learn-Header.png">
+  </div>
+
+  <h2> 💻 Hard Skills </h2>
+
+  <details>
+    <summary>🛠️ Integração entre frontend e backend</summary>
+    <ul>
+      <li>Desenvolvi mais segurança na comunicação entre interface e API, conectando telas, serviços e endpoints reais.</li>
+      <li>Essa experiência veio da implementação de autenticação, consumo de indicadores e integração de funcionalidades administrativas.</li>
+      <li>No projeto, isso foi essencial para garantir consistência entre o que o usuário via na interface e o que era processado no backend.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🛠️ Segurança e autenticação</summary>
+    <ul>
+      <li>Aprofundei meu contato com autenticação e controle de acesso em aplicações full stack.</li>
+      <li>Aprendi a trabalhar com login, logout, proteção de rotas, configuração de permissões e comunicação segura com a API.</li>
+      <li>Esse aprendizado foi importante para construir uma aplicação mais robusta e mais próxima de um cenário real.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🛠️ Integração com banco de dados</summary>
+    <ul>
+      <li>Ganhei mais prática com persistência de dados, modelagem de tabelas e organização do fluxo de armazenamento no backend.</li>
+      <li>Esse aprendizado apareceu principalmente no salvamento dos registros recebidos e no suporte aos indicadores e alertas.</li>
+      <li>Isso fortaleceu minha visão sobre como o banco sustenta a confiabilidade e a continuidade da aplicação.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🛠️ Otimização e tratamento de dados</summary>
+    <ul>
+      <li>Aprendi a olhar com mais cuidado para fluxo de dados, atualização periódica e enriquecimento das informações no backend.</li>
+      <li>Essa experiência veio da implementação de rotinas de persistência, ajustes de estruturas e processamento dos indicadores.</li>
+      <li>No sistema, isso contribuiu para manter os dados mais úteis, consistentes e preparados para exibição em dashboards.</li>
+    </ul>
+  </details>
+
+  <h2> 🤝 Soft Skills </h2>
+
+  <details>
+    <summary>🌱 Visão sistêmica</summary>
+    <ul>
+      <li>Atuar no frontend e no backend me ajudou a enxergar o sistema de forma mais completa.</li>
+      <li>Aprendi a considerar o impacto de cada decisão na interface, na API, na segurança e no armazenamento dos dados.</li>
+      <li>Essa visão mais ampla contribuiu para entregas mais consistentes e melhor integração com o restante do time.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🌱 Resolução de problemas</summary>
+    <ul>
+      <li>Ao lidar com autenticação, integração de endpoints e fluxo de dados, desenvolvi mais capacidade de investigar e resolver problemas complexos.</li>
+      <li>Essa habilidade foi importante para reduzir bloqueios durante a implementação das funcionalidades.</li>
+      <li>Também me ajudou a trabalhar de forma mais autônoma em tarefas técnicas com várias camadas envolvidas.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🌱 Colaboração técnica</summary>
+    <ul>
+      <li>Como trabalhei em diferentes partes da aplicação, precisei me comunicar bem com o time para alinhar contratos, comportamento das telas e estrutura dos dados.</li>
+      <li>Essa colaboração ajudou a manter o desenvolvimento mais fluido e a reduzir retrabalho.</li>
+      <li>Foi uma experiência importante para fortalecer meu papel em projetos com arquitetura full stack.</li>
+    </ul>
+  </details>
+
 </details>
